@@ -17,25 +17,25 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency('rails', '>= 3.2')
-  s.add_dependency('haml', '~> 4.0')
+  s.add_dependency('rails', '~> 6.0.3')
+  s.add_dependency('bootsnap')
+  s.add_dependency('webpacker')
+  s.add_dependency('haml')
   s.add_dependency('sass')
-  s.add_dependency('formtastic', '~> 2.2.1') # 2.1 requries actionpack 3.0
-  s.add_dependency('uuidtools', '~> 2.1')
-  s.add_dependency('mustache', '~> 0.99')
-  s.add_dependency('rabl', '~> 0.6')
+  s.add_dependency('formtastic') # 2.1 requries actionpack 3.0
+  s.add_dependency('uuidtools')
+  s.add_dependency('mustache')
+  s.add_dependency('rabl')
 
   s.add_development_dependency('yard')
   s.add_development_dependency('rake')
-  s.add_development_dependency('sqlite3')
-  s.add_development_dependency('bundler', '~> 1.6.1')
-  s.add_development_dependency('rspec-rails', '~> 2.14.2')
-  s.add_development_dependency('capybara', '~> 2.2.1')
-  s.add_development_dependency('launchy', '~> 2.4.2')
-  s.add_development_dependency('poltergeist', '~>1.5.0')
-  s.add_development_dependency('json_spec', '~> 1.1.1')
-  s.add_development_dependency('factory_girl', '~> 4.4.0')
-  s.add_development_dependency('database_cleaner', '~> 1.2.0')
+  s.add_development_dependency('rspec-rails')
+  s.add_development_dependency('capybara')
+  s.add_development_dependency('launchy')
+  s.add_development_dependency('poltergeist')
+  s.add_development_dependency('json_spec')
+  s.add_development_dependency('factory_girl')
+  s.add_development_dependency('database_cleaner')
   s.add_development_dependency('rspec-retry')
 end
 

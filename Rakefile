@@ -2,7 +2,7 @@ $LOAD_PATH << File.expand_path('../lib', __FILE__)
 require 'fileutils'
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
-
+require 'tempfile'
 ###### RSPEC
 
 RSpec::Core::RakeTask.new(:spec)
@@ -24,7 +24,7 @@ namespace :testbed do
     Tempfile.open('surveyor_Rakefile') do |f|
       f.write("application \"config.time_zone='Rome'\"\n")
       f.flush
-      sh "bundle exec rails new testbed --skip-bundle -m #{f.path}" # don't run bundle install until the Gemfile modifications
+      sh "rails new testbed --skip-bundle -m #{f.path}" # don't run bundle install until the Gemfile modifications
     end
     chdir('testbed') do
       gem_file_contents = File.read('Gemfile')
