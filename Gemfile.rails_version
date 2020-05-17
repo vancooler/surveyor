@@ -8,7 +8,7 @@ case env_rails_version
 when "master"
   {github: "rails/rails"}
 when "default"
-  gem "rails", '~> 6.0.3'
+  gem "rails"
 when /^3.2/
   gem "rails", "~> #{env_rails_version}"
   # A JS runtime is required for Rails 3.1+
