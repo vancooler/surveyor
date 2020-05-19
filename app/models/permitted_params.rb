@@ -1,7 +1,7 @@
 class PermittedParams < Struct.new(:params)
   # per http://railscasts.com/episodes/371-strong-parameters
   def strong_parameters
-    ActionController::Parameters.new(params)
+    params
   end
   # survey
   def survey
